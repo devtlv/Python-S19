@@ -4,15 +4,15 @@
 
 # Topics
 
-- Class 1
+## Class 1
+---
+*Operating systems*
 
-Operating systems
+*Computer basics and files management*
 
-Computer basics and files management
+*Git and GitHub*
 
-Git and GitHub
-
-The terminalx`x`x`
+*The terminal*
 
 
 
