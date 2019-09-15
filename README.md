@@ -5,9 +5,14 @@
 # Topics
 
 - Class 1
+
 Operating systems
+
 Computer basics and files management
+
 Git and GitHub
+
 The terminalx`x`x`
+
 
 
