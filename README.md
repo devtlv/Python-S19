@@ -4,8 +4,7 @@
 
 # Topics
 
-## Class 1
----
+### Class 1
 *Operating systems*
 
 *Computer basics and files management*
