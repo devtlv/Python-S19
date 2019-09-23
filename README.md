@@ -10,5 +10,7 @@
 *Git and GitHub*  
 *The terminal*  
 
-
+## Class 2
+*HTML basics* 
+*pycharm IDE installation*
 
