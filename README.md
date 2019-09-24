@@ -14,3 +14,6 @@
 *HTML basics* 
 *pycharm IDE installation*
 
+## Class 3
+*CSS basics*
+
