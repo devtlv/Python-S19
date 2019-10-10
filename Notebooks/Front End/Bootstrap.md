@@ -129,9 +129,25 @@ Bootstrap provides three types of form layouts:
 - Horizontal, `form-horizontal` class
 - Inline, `form-inline` class
 
-To build a form with bootstrap, each label/input couple in the form should be in a `<div class="form-group">` container, and add `form-control` class to all textual input.
 
-> If you're building an horizontal form, you need to add `form-label` to all the form labels.
+
+To build a vertical form with bootstrap:
+
+1) Put each label/input couple in a `<div class="form-group">` container
+
+2) Add the`form-control` class to all textual input.
+
+
+
+To build an horizontal form, you need to use bootstrap grid system:
+
+1) Add `control-label` class to the labels.
+
+2) Add the size of the label in the class with a `col` class.
+
+3) Put the input into a div and add a `col` class to this div to size it.
+
+
 
 
 
@@ -147,7 +163,6 @@ A list of the bootstrap buttons:
 - `btn-info`
 - `btn-warning`
 - `btn-danger`
-- `btn-link`
 
 
 
@@ -172,8 +187,8 @@ Now you can add all your toggleable elements to the list in `<li>` elements.
 You can add a `<li class="divider"></li>` to create a thin horizontal border in your dropdown menu.
 
 ```html
-<div class="my_dropdown">
-	<button class="btn dropdown-toggle" data-toggle="my_dropdown">
+<div class="dropdown">
+	<button class="btn dropdown-toggle" data-toggle="dropdown">
        Open me 
     </button>
     <ul class="dropdown-menu">

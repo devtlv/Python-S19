@@ -1,5 +1,6 @@
 body{
     background-color: lightsteelblue;
+    margin:0;
     font-family: Lato, sans-serif;
 }
 
@@ -16,17 +17,12 @@ a{
     list-style: none;
     list-style-type: non;
 }
-#welcome-text{
-    position: relative;
-    bottom: 100px;
-}
 .main-container{
     background-color: ghostwhite;
-    width: 80%;
+    width: 100%;
     margin: auto;
     padding: 50px;
     height: 3000px;
-    margin-top: 30px;
 }
 
 #hobbies-list{

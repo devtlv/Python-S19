@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My first page</title>
+    <link rel="stylesheet" href="master.css"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <br>
+        <h1 id="welcome-text">I'm the Koala !</h1>
+        <img  alt="Koala" height=200 width=200 src="https://www.savethekoala.com/sites/savethekoala.com/files/uploads/koala_donate.jpg"/>
+        <br><br>
+        <div class="btn-group">
+            <button class="btn btn-primary" >
+                <span class="glyphicon glyphicon-thumbs-up"></span> Like</button>
+            <button class="btn btn-primary">
+                <span class="glyphicon glyphicon-thumbs-down"></span> Dislike</button>
+        </div>
+        <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Things I like
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a>Bamboos</a></li>
+                        <li><a>Sleeping</a></li>
+                        <li><a>Climbing on trees</a></li>
+                    </ul>
+                </div>
+
+                </div>
+                <div class="col-md-6">
+
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            Things I don't like
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a>Sport</a></li>
+                            <li><a>Fighting</a></li>
+                            <li><a>Running away because of deforestation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+        <button class="btn btn-default" data-toggle="collapse" data-target="#collapsible-bio">More about me</button>
+        <div class="collapse" id="collapsible-bio" >
+            <p>
+               The koala (Phascolarctos cinereus, or, inaccurately, koala bear[a]) is an arboreal herbivorous marsupial native to Australia. It is the only extant representative of the family Phascolarctidae and its closest living relatives are the wombats, which comprise the family Vombatidae. The koala is found in coastal areas of the mainland's eastern and southern regions, inhabiting Queensland, New South Wales, Victoria, and South Australia. It is easily recognisable by its stout, tailless body and large head with round, fluffy ears and large, spoon-shaped nose. The koala has a body length of 60–85 cm (24–33 in) and weighs 4–15 kg (9–33 lb). Pelage colour ranges from silver grey to chocolate brown. Koalas from the northern populations are typically smaller and lighter in colour than their counterparts further south. These populations possibly are separate subspecies, but this is disputed.
+            </p>
+        </div>
+
+        <h2>Comments:</h2>
+        <div class="comments-container">
+            <ul class="comments-list">
+                <li class="comment">
+                    <p class="comment-title">I love your CV !</p>
+                    <p class="comment-content">I really love koalas, thanks for posting your life here !</p>
+                </li>
+                <li class="comment">
+                    <p  class="comment-title">I hate your CV !</p>
+                    <p  class="comment-content">I really hate koalas !</p>
+                </li>
+            </ul>
+
+            <form class="container">
+                <div class="row mb-2">
+                    <label class="col-md-4">Title: </label>
+                    <input class="col-md-8" placeholder="Add a title..." type="text">
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-4">Content: </label>
+                    <textarea class="col-md-8"  placeholder="Add your comment..." cols="50" rows="3"></textarea>
+                </div>
+
+                <div class="row">
+                    <input class="col-md-4 offset-md-8" type="submit" value="Add a comment">
+                </div>
+            </form>
+        </div>
+        <br><br>
+        <h4>Submit a suggestion to enhance my site:</h4>
+
+        <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="name">Name:</label>
+                    <div class="col-sm-10">
+                        <input id="name" type="text" class="form-control">
+                    </div>
+                </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Email:</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Suggestion:</label>
+                <div class="col-sm-10">
+                    <input  class="form-control" type="text">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2">
+                    <input class="btn btn-primary" type="submit" value="Submit a suggestion">
+                </div>
+            </div>
+        </form>
+
+        <hr>
+
+       <footer>
+            <h4>Contact:</h4>
+            <a href="mailto:eyal.work@chocron.eu">
+                <span class="glyphicon glyphicon-envelope"></span>
+                Send me an email!
+            </a>
+           <br>
+           <a href="tel:+972586878399">
+               <span class="glyphicon glyphicon-earphone"></span>
+               Call me !
+           </a>
+           <br>
+           <a href="https://wa.me/972586878399" target="_blank">
+               <span class="glyphicon glyphicon-envelope"></span>
+               Send me a whatsapp message !
+           </a>
+       </footer>
+
+    </div>
+
+</body>
+</html>
