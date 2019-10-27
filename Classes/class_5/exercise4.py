@@ -16,7 +16,7 @@ x = 7
 x_as_txt = str(x)
 
 # Processing the 3 other numbers
-n1 = int(x_as_txt * 2) 
+n1 = int(x_as_txt * 2)
 n2 = int(x_as_txt * 3)
 n3 = int(x_as_txt * 4)
 

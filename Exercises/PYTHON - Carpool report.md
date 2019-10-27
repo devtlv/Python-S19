@@ -1,3 +1,5 @@
+<!- Tags=['strings', 'integers'] -->
+
 # Variables and names
 
 Your job is to automate some reports for a carpool application.  
