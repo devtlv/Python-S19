@@ -14,15 +14,23 @@
 *HTML basics*  
 *pycharm IDE installation*  
 > See Notebooks:  
-> -  FrontEnd/HTMLBasics.md  
+> -  FrontEnd/HTML Basics.md  
 
 ## Class 3
 *CSS basics*
 > See Notebooks:  
-> -  FrontEnd/CSSBasics.md
+> -  FrontEnd/CSS Basics.md
 
 ## Class 4
 *Bootstrap Basics*
 > See Notebooks:
 > -  FrontEnd/Boostrap.md
 
+## Class 5
+**Python First steps**
+**Python strings**
+**Python variables**
+> See Notebooks:
+> -  Python/First Steps.md
+> -  Python/Strings, Booleans and Integers.md
+> -  Python/Variables
