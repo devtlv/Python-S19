@@ -27,10 +27,25 @@
 > -  FrontEnd/Boostrap.md
 
 ## Class 5
-**Python First steps**
-**Python strings**
-**Python variables**
+*Python First steps*  
+*Python strings*  
+*Python variables*  
 > See Notebooks:
 > -  Python/First Steps.md
 > -  Python/Strings, Booleans and Integers.md
 > -  Python/Variables
+
+## Class 6
+*Control flow*  
+*Lists basics*  
+*User interaction*
+> See Notebooks:
+>  - Python/If and Loops - Abstract.md
+>  - Python/Control Flow.md
+>  - Python/Lists.md
+>  - Python/User interaction.md
+
+## Class 7
+*Lists basics*  
+*While Loops*
+
