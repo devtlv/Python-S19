@@ -48,4 +48,7 @@
 ## Class 7
 *Lists basics*  
 *While Loops*
+> See Notesbooks:
+>  - Python/Lists.md
+>  - Python/While Loops.md
 
