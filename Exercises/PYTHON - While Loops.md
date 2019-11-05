@@ -19,8 +19,8 @@ Given a list, use a while loop to print out every elements from the end to the b
 Without your computer, guess the output of this piece of code:
 ```python
 i = 1
-while True: 
-    if i%3 == 0: 
+while True:    
+    if i == 3: 
         break
     print(i) 
     i + = 1

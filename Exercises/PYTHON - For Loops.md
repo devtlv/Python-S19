@@ -1,6 +1,18 @@
 <!-- Tags=['ForLoop'] -->
 
 ### Exercise (easy)
+You have a list of users, and you want to remove every user that is below 16 years old.
+
+Write a program that ask every user their age, and if they are less than 16 years old, remove them from the list.
+
+At the end, print the final list.
+
+Example list:
+```python
+names = ['Rick', 'Morty', 'Beth', 'Jerry', 'Summer']
+```
+
+### Exercise (easy)
 
 Use a `for` loop to print the numbers from 1 to 20, inclusive.
 
