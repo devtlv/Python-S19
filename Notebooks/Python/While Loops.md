@@ -27,6 +27,8 @@ current_number = 1
 while current_number <= 5:    
     print(current_number)   
     current_number += 1
+    
+print("Finished")
 ```
 
 ```
@@ -76,6 +78,7 @@ For example:
 
 ```python
 active = True
+
 while active: 
     city = input("Please enter the name of a city you have visited (enter 'quit' to when you are finished): ")
     if city == 'quit':
@@ -147,8 +150,22 @@ while current_number <= 10:
     current_number += 1
     if 3 < current_number < 7: # If the number is between 3 and 7 
         continue 				# Go back to the beginning of the loop
-        
+    print(current_number)
+       
 ```
+
+>  Be careful, this can end in an infinite loop
+
+```python
+current = 0
+while current <= 10:
+    print(current)
+    if 3 < current < 7:
+        continue
+    current += 1
+```
+
+
 
 ```python
 1
@@ -174,8 +191,9 @@ For example:
 my_index = 0
 my_list = ['Hello', 'World', 'I am', 'Rick']
 
-while my_index <= len(my_list):
+while my_index < len(my_list):
     print(my_list[my_index])
+    my_index += 1
 ```
 
 **Add elements to a list**

@@ -1,43 +1,48 @@
-### Exercise 1 (easy)
+### Exercise (easy)
 
 Write a loop that prompts the user to enter a series of pizza toppings until they enter a 'quit' value. As they enter each topping, print a message saying you’ll add that topping to their pizza .
 
 
 
-### Exercise 2 (easy)
+### Exercise (easy)
 
 A movie theater charges different ticket prices depending on a person’s age . If a person is under the age of 3, the ticket is free; if they are between 3 and 12, the ticket is $10; and if they are over age 12, the ticket is $15 .
 
  Write a loop in which you ask users their age, and then tell them the cost of their movie ticket .
 
 
+### Exercise (easy)
 
-### Exercise 3 (medium)
+Given a list, use a while loop to print out every elements from the end to the beginning.
+
+### Exercise (easy)
+Without your computer, guess the output of this piece of code:
+```python
+i = 1
+while True: 
+    if i%3 == 0: 
+        break
+    print(i) 
+    i + = 1
+```
+
+### Exercise (medium)
 
 Take the last exercise, and apply it to a family, ask every member of the family their age, and at the end of the loop, tell them the cost of the tickets for the whole family.
 
 
-
-### Exercise 4 (easy)
-
-Given a list, use a while loop to print out every elements from the end to the beginning.
-
-
-
-### Exercise 5 (medium)
+### Exercise (medium)
 
 Given a list, use a while loop to print out every element which his index is even.
 
 
-
-### Exercise 6 (medium)
+### Exercise (medium)
 
 A group of teenagers is coming to your movie theater and want to see a movie that is restricted for people between 16 and 21 years old.
 
 Write a program that ask every user their age, and then tell them which can see the movie.
 
 >  Try to add the allowed ones to a list. 
-
 
 
 ### Exercise (medium)
@@ -49,11 +54,9 @@ Write a program that ask every user their age, and if they are less than 16 year
 At the end, print the final list.
 
 
-
 ### Exercise (medium)
 
 Write a Python program to find those numbers which are divisible by 7 and multiple of 5, between 1500 and 2700.
-
 
 
 ### Exercise (medium)
@@ -61,17 +64,27 @@ Write a Python program to find those numbers which are divisible by 7 and multip
 Count the number of spaces in a string.
 
 
-
 ### Exercise (medium)
 
 Count the number of words in a string.
 
-  
 
 ### Exercise (medium)
 
 Write a program that calculate the number of upper case letters and lower case letters in a string.
 
+### Exercise (medium)
+
+Without your computer, guess the output of this program:
+```python
+index = 0
+my_list = [321, 312, 123, 434, 1235]
+while index < len(my_list):
+    s = str(my_list[index])
+    print(s[-1])
+    index += 1
+
+```
 
 
 ### Exercise (hard)

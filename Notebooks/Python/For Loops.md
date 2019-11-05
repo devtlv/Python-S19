@@ -1,5 +1,3 @@
-
-
 # For loops
 
 You’ll often want to run through all entries in a list, performing the same task with each item. 
