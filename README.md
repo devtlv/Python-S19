@@ -4,29 +4,29 @@
 
 # Topics
 
-## Class 1
+### Class 1
 *Operating systems*  
 *Computer basics and files management*  
 *Git and GitHub*  
 *The terminal*  
 
-## Class 2
+### Class 2
 *HTML basics*  
 *pycharm IDE installation*  
 > See Notebooks:  
 > -  FrontEnd/HTML Basics.md  
 
-## Class 3
+### Class 3
 *CSS basics*
 > See Notebooks:  
 > -  FrontEnd/CSS Basics.md
 
-## Class 4
+### Class 4
 *Bootstrap Basics*
 > See Notebooks:
 > -  FrontEnd/Boostrap.md
 
-## Class 5
+### Class 5
 *Python First steps*  
 *Python strings*  
 *Python variables*  
@@ -35,7 +35,7 @@
 > -  Python/Strings, Booleans and Integers.md
 > -  Python/Variables
 
-## Class 6
+### Class 6
 *Control flow*  
 *Lists basics*  
 *User interaction*
@@ -45,10 +45,14 @@
 >  - Python/Lists.md
 >  - Python/User interaction.md
 
-## Class 7
+### Class 7
 *Lists basics*  
 *While Loops*
-> See Notesbooks:
+> See Notebooks:
 >  - Python/Lists.md
 >  - Python/While Loops.md
 
+### Class 8
+*While Loops*
+> See Notebooks:
+>  - Python/While Loops.md
