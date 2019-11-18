@@ -56,3 +56,16 @@
 *While Loops*
 > See Notebooks:
 >  - Python/While Loops.md
+
+### Class 9
+*For Loops*
+> See Notebooks:
+>  - Python/For Loops.md
+
+### Class 10
+*Sets*  
+*Tuples*  
+*Dictionaries*
+> See Notebooks:
+>  - Python/Sets and Tuples.md
+>  - Python/Dictionaries.md

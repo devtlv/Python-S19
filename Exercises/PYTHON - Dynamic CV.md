@@ -1,4 +1,5 @@
 <!- Tags=['html', 'variables', 'string'] -->
+
 # Dynamic CV
 
 Use python to create a simple CV in HTML.  

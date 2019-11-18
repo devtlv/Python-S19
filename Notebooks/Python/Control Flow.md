@@ -150,7 +150,6 @@ if "code" in my_hobbies:
 ```
 
 
-
 #### not keyword
 
 The `not` keyword will just return `True` if the condition is False.

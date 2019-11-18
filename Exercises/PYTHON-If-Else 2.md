@@ -1,4 +1,3 @@
-
 ## 1.Take three numbers from the user and print the greatest number.
 
     Test Data
