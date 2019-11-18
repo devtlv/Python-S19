@@ -1,6 +1,21 @@
 <!-- Tags=['ForLoop'] -->
 
 ### Exercise (easy)
+Write a program that counts the number of element for a list, without the len function.
+```python
+    name=['Alex','Mike','Dylan','Yossi']
+```
+
+### Exercise (easy)
+Write a program that print every name that starts by 'a'
+```python
+    name=['Alex','Mike','Dylan','yossi','Alan']
+```
+
+### Exercise (easy) 
+Write a Python program that prints all the numbers from 0 to 10 except 3 and 6.
+
+### Exercise (easy)
 You have a list of users, and you want to remove every user that is below 16 years old.
 
 Write a program that ask every user their age, and if they are less than 16 years old, remove them from the list.
@@ -40,6 +55,22 @@ Write a program that returns the index of the first occurrence of an item in a l
 ### Exercise (easy)
 
 Write a little program that concatenate two lists together without using the `+` sign.
+
+## Exercise (medium)
+Create a board as following by using for loops:
+```python
+    X
+    XX
+    XXX
+    XXXX
+    XXXXX
+    XXXXXX
+    XXXXX
+    XXXX
+    XXX
+    XX
+    X
+```
 
 
 
@@ -97,6 +128,24 @@ Draw the following pattern using for loops:
 *****
 ```
 
+
+### Exercise (medium)
+```python
+What is the output of the following?¶
+    x = ['ab', 'cd']
+    for i in x:
+        i.upper()
+    print(x)
+```
+
+### Exercise (medium)
+What is the output of the following?¶
+```python
+    x = ['ab', 'cd']
+    for i in x:
+        x.append(i.upper())
+    print(x)
+```
 
 
 ### Exercise (hard)
