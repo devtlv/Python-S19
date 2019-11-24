@@ -69,3 +69,8 @@
 > See Notebooks:
 >  - Python/Sets and Tuples.md
 >  - Python/Dictionaries.md
+
+### Class 11
+Functions
+> See Notebooks:
+>  - Python/Functions.md
