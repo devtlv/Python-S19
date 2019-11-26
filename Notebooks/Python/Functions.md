@@ -333,6 +333,112 @@ Hello Debbie !
 
 
 
+### Seeing functions as address
+
+When you run a program, your computer loads the source code from the hard disk (HDD) and start to allocate a piece of random access memory (RAM), which is a lot faster than HDD, but also smaller. RAM is used to store temporary values, like variables. 
+
+A RAM card looks like this:
+
+![Ram card](img/ram_pic.jpg)
+
+All those chips are composed of sillicone transistors, which are basically binary switches, their value can be `0` or `1` they are called *bits*. Those switches are grouped by groups of 8, called *byte*s.
+
+The amount of switches depends on the computer you're using, it's written somewhere on your system. When people are saying "My computer is leet, it got 16 GB RAM", most of the time they don't know what they talk about. It just mean that their computer contains 16 Gigabyte (16 billion) groups of 8 switches.
+
+Each group has an address, and a value, here is what it looks like:
+
+![transistors](img/ram_microscope.jpg)
+
+Let's represent it as a table, for a 4GB RAM computer, the table will have 4 billion rows, each row is an "Address"-"Value" pair:
+
+| Address | Value |
+| ------- | ----- |
+|         |       |
+
+The processor is the only one who can fetch/modify a value in the RAM. The processor also have some groups of switches, called *registers*, those registers can store 32 or 64 bits, depending on your processor type. 
+
+Now what happen when you run:
+
+```python
+my_name = "Eyal is a good teacher"
+age = 5
+```
+
+The processor take each of those variables (`"Eyal"` and `5`), and try to store it in a registery.  Now the `5` can be stored in a registery, because 64 bits are enough to store `5`, but the text could never fit in it (Think that every letter is 8 bits..). The trick here is to store it somewhere in the RAM, and store the address of the first letter in the registry. This is called a *pointer*.
+
+Here is the state of the RAM after this code has been ran:
+
+| Address  | Value |
+| -------- | ----- |
+| 1        |       |
+| ...      | ...   |
+| 0xa2ef50 | 'E'   |
+| 0xa2ef51 | 'y'   |
+| ...      | ...   |
+| 0xa2ef71 | a     |
+| 0xa2ef72 | r     |
+| 0xa2ef73 | \00   |
+
+Now we can see a variable as a registery, because that's how the computer stores a value, here is now the state of the variables:
+
+| Variable name | Variable value |
+| ------------- | -------------- |
+| age           | 5              |
+| my_name       | *0xa2ef50      |
+
+Here, `age` is 5, and `my_name` is a pointer to `0xa2ef50`.
+
+
+
+Now for a function, what happen when you run:
+
+```python
+def my_function(name):
+    name = name.title()
+    print("Hello", name)
+```
+
+Actually the computer will put the code:
+
+```python
+name = name.title()
+print("Hello", name)
+```
+
+somewhere into the memory, let's say at address `0x22efea`. And create a variable called `my_function`, which his value is `*0x22efea`. When adding round brackets `()` after `my_function`, it tells python to execute the code stored in `0x22efea`. 
+
+
+
+Now that we know that functions are just addresses, we can use them in many other ways, as they were actual variables. For example, let's create three functions:
+
+```python
+def my_f1():
+    print("Hello")
+   
+def my_f2():
+    print("Word")
+   
+def my_f3():
+    print("This is Rick!")
+```
+
+If we refer to functions as variables, we can store them in a list:
+
+```python
+list_of_functions = [my_f1, my_f2, my_f3]
+```
+
+> Be sure to remove the round brackets, else the function will be executed and you will store the result of it.
+
+And now that we have a list of variables that can be executed when adding round brackets, let's execute them with a for loop
+
+```python
+for function in list_of_functions:
+    print(function())
+```
+
+
+
 **Modifying a list in a function**
 
 When you pass a list to a function, the function can modify the list. Any changes made to the list inside the function’s body are permanent (even outside the function), allowing you to work efficiently even when you’re dealing with large amounts of data. 
@@ -440,3 +546,4 @@ Remember that you can always call a function from another function, which can be
 
 
 
+### 
