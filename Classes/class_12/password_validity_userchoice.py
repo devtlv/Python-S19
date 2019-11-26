@@ -19,6 +19,7 @@ def check_length(string):
     if 6 < len(string) < 12:
         return True
 
+    print("Your password is not between 6 and 12 characters")
     return False
 
 def has_right_symbols(string):
@@ -32,6 +33,7 @@ def has_right_symbols(string):
             return True
     # End of the loop, we still didn't see any numbers, else we 
     # woud have exited the function
+    print("Your password needs to contain one of those symbols: $#@")
     return False
 
 def has_upper_letter(string):
@@ -41,6 +43,7 @@ def has_upper_letter(string):
     if it doesn't
     """
     if string.islower():
+        print("Your password doesn't contain any upper letter")
         return False
 
     return True
@@ -58,6 +61,7 @@ def has_number(string):
 
     # End of the loop, we still didn't see any numbers, else we 
     # woud have exited the function
+    print("Your password doesn't contain any number")
     return False
 
 
@@ -68,8 +72,8 @@ def has_lower_letter(string):
     if it doesn't
     """
     if string.isupper(): # This is checking if all the letters 
+        print("Your password doesn't contain any lower letter")
         return False     # in the string are upper cased
-
     return True
 
 def check_password_validity(password, validators):
@@ -91,16 +95,36 @@ print("5 - Length need to be between 6 and 12")
 print("")
 print("Type every number that you want to add, for example: 145")
 user_choice = input("> ")
+
 print("Now enter your password")
 print("Don't worry.. we won't keep it (we will)")
 user_pwd = input("> ")
- ____________________
-< Is it too hard ..? >
- --------------------
-        \   ^__^
-         \  (oo)\_______
-            (__)\       )\/\
-                ||----w |
-                ||     ||
+
+functions_dict = {
+    '1': has_lower_letter,
+    '2': has_upper_letter,
+    '3': has_number,
+    '4': has_right_symbols,
+    '5': check_length,
+}
+
+user_choices = list(user_choice)
+validators = []
+for number in user_choices:
+    corresponding_function = functions_dict[number]
+    validators.append(corresponding_function)
+
+result = check_password_validity(user_pwd, validators)
+if result:
+    print("Your password match the criteria")
+else:
+    print("Your password doesn't match the criteria")
+
+
+
+
+
+
+
 
 
