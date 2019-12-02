@@ -75,3 +75,12 @@ Functions
 > See Notebooks:
 >  - Python/Functions.md
 
+### Class 12
+Functions
+> See Notebooks:
+>  - Python/Functions.md
+
+### Class 13
+Classes
+> See Notebooks:
+>  - Python/OOP - Basics.md
