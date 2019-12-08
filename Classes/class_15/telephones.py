@@ -16,7 +16,7 @@ class Smartphone:
 class Iphone(Smartphone):
 
     def __init__(self, number, password):
-        super().__init__(self, number, password, 'Apple')
+        super().__init__(number, password, 'Apple')
 
     def face_unlock(self):
         print("Phone unlocked!")

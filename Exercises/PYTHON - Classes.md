@@ -17,4 +17,29 @@ Now add a `fuel_cost` attribute that represents the amount of gas your car need 
 If the car runs out of gas then.. too bad for the user.
 
 
+### Exercise 4 (easy)
+Create a class called `Character`, this is a parent class for all the characters of your game.
+This class should have those attributes:
+- `lifepoints`
+- `name`
+- `hair_color`  
 
+
+And those functions:
+- `introduce()`  
+Display an introduction sentence on the character  
+-  `change_hair_color()`  
+Change the hair color of the character
+-  `rest()`  
+Set the lifepoints at 100
+
+### Exercise 4-2 (medium)
+Create three classes: `Warrior`, `Sorcerer` and `Drood`.  
+They all are characters, but every one has a special attack:  
+-  `Warrior` can `roar()`, when this function is called, the warrior screams loudly.
+-  `Sorcerer` can `curse()`, when this function is called, he pronounce a scary curse against someone's name.
+-  `Drood` can `heal()`, when this function is called, he restores 10 lifepoints to himself.
+
+### Exercise 4-3 (hard)
+The `Warrior` can now `attack()` another character, reducing his lifepoints by 10.  
+The `Drood` can heal someone else, restoring him 10 lifepoints.

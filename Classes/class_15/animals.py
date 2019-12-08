@@ -18,7 +18,7 @@ class Animal:
 class Eagle(Animal):
 
     def __init__(self, name, color):
-        super().__init__(self, name)
+        super().__init__(name)
         self.color = color
 
     def hunt(self):
