@@ -1,5 +1,5 @@
 ### Instance Methods
-Instance methods are defined inside a class and are used to define a function that belongs to a class. For example, in real life, the "bark" function belongs to "Dog" class.  
+Instance methods are defined inside a class and are used to define a function that belongs to a class. For example, in real life, the "bark" function belongs t, Dog" class.  
 Instance methods can be used to perform operations with the attributes, or to get the contents of an instance, and many other things.   
 
 To define a method, just use the `def` keyword inside the class, like we were doing with the `__init__` method. All instance methods need to receive `self` as first argument, this allow us to play with the object inside the method.  
@@ -198,3 +198,128 @@ my_dog = AlienDog("Rex", "Lithis04")
 
 Here I have created two new classes, `Alien` and `AlienDog`, `AlienDog` inherit from `Alien` and from `Dog`, but both classes have an `__init__` and a `sleep` method, though the functions of `Alien` will be transfered to `AlienDog` because `Alien` is before `Dog` in the class definition (`class AlienDog(Alien, Dog)`).
 
+### Using objects as addresses
+
+Like functions, objects are just variables containing an address. Understanding this is very important to manipulate objects.  
+
+###### Passing objects as function arguments
+
+The `self` argument is an example of using objects as addresses, it contains the address of the object passed to the function. The `self` argument is not special, his name is just a convention.  
+Let's try to pass an object as a function argument, and use it. 
+
+```python
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        print(self.name,'barks, WOOF!')
+
+def bark_three_times(dog):
+    dog.bark()
+    dog.bark()
+    dog.bark()
+
+my_dog = Dog('Richie')
+bark_three_times(my_dog)
+```
+
+```python
+Richie barks, WOOF !
+Richie barks, WOOF !
+Richie barks, WOOF !
+```
+
+It works ! `my_dog` is just an address, when passed to `bark_three_times`, `dog` argument is taking the value of `my_dog`, so all the operations executed on `dog` are actually executed on `my_dog`.
+
+Actually, everytime you make a function that receives an argument, you are passing an object as argument, but so far it was only built in objects, like string, dict or boolean, python don't know the type of your argument when you are defining the function, you need to check that the input format is respected.
+
+###### Storing objects inside containers
+
+Because they are only variables, you can also store objects in a list, for example, let's create 5 dogs, and store them into a list `my_dogs`.
+
+```python
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        print(self.name,'barks, WOOF!')
+
+def bark_three_times(dog):
+    dog.bark()
+    dog.bark()
+    dog.bark()
+
+my_dogs = [Dog('Richie'), Dog('Tom'), Dog('John'), Dog('Bradley'), Dog('Chocolate')]
+```
+
+We don't even need to store each dog in a variable, because they are stored into a list, we can also generate this list dynamically:
+
+```python
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        print(self.name,'barks, WOOF!')
+
+def bark_three_times(dog):
+    dog.bark()
+    dog.bark()
+    dog.bark()
+
+dogs_names = ['Richie', 'Tom', 'John', 'Bradley', 'Chocolate']
+my_dogs = []
+for name in dogs_names:
+    dog = Dog(name)
+    my_dogs.append(dog)
+```
+
+###### Using an object as an attribute of another object
+
+Let's create a human:
+```python
+def Human:
+    def __init__(self, name):
+        self.name = name
+
+me = Human('Rick')
+```
+
+Now let's say that this human has a dog, called Richie, first let's create the dog
+
+```python
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        print(self.name,'barks, WOOF!')
+
+richie = Dog('Richie')
+```
+
+We need a way to map between the human and the dog, and this mapping would be even better if it was direct between the human and the dog. Like if `me.dog` was a direct access to the dog object (here called `richie`).  
+We can do this, because `richie` is only storing an address, let's just add a `dog` attribute to human.
+
+```python
+def Human:
+    def __init__(self, name, dog):
+        self.name = name
+        self.dog  = dog
+
+    def play_with_dog(self):
+        print("{} is playing with {}".format(self.name, self.dog.name))
+        self.dog.bark()
+
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        print(self.name,'barks, WOOF!')
+
+richie = Dog('Richie')
+me = Human('Rick', richie)
+```

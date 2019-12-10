@@ -43,3 +43,23 @@ They all are characters, but every one has a special attack:
 ### Exercise 4-3 (hard)
 The `Warrior` can now `attack()` another character, reducing his lifepoints by 10.  
 The `Drood` can heal someone else, restoring him 10 lifepoints.
+
+### Exercise 4-4 (easy)
+When a character is created, he should say something. Each class says a different thing, store this as a class attribute.  
+When `Warrior` is created, he says `"Grrr.."`  
+When `Sorcerer` is created, he says `"Wooba lubba dub dub !"`
+When `Drood` is created, he says `"Hello World !"`
+
+### Exercise 4-5 (hard)
+Change this sentence class attribute to a list of sentence, each time a new character is created, he says the next sentence in the list, if there is no more sentences, just go back to the first one.
+
+### Exercise (medium)
+Create a `Human` class.  
+Create a family tree, a dictionary that stores members of a family, each member should be a `Human` object.
+
+
+
+
+
+
+
