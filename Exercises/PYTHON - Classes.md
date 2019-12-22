@@ -53,13 +53,7 @@ When `Drood` is created, he says `"Hello World !"`
 ### Exercise 4-5 (hard)
 Change this sentence class attribute to a list of sentence, each time a new character is created, he says the next sentence in the list, if there is no more sentences, just go back to the first one.
 
-### Exercise (medium)
+### Exercise 5 (medium)
 Create a `Human` class.  
 Create a family tree, a dictionary that stores members of a family, each member should be a `Human` object.
-
-
-
-
-
-
 
