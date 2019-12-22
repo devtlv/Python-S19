@@ -57,3 +57,63 @@ Change this sentence class attribute to a list of sentence, each time a new char
 Create a `Human` class.  
 Create a family tree, a dictionary that stores members of a family, each member should be a `Human` object.
 
+### Exercise 5-1 (medium)
+Replace the family tree dictionnary by a `FamilyTree` class.  
+
+### Exercise 6 (easy)
+Create a `Player` class, the only attribute of a player for now is his name.  
+
+### Exercise 7 (easy)
+Create a `RockPaperScissors` game, the game is initialized with two `Player` objects, like this:  
+```
+rick = Player("Rick")
+morty = Player("Morty")
+game = RockPaperScissors(rick, morty)
+```
+Every player have a number of points, starting at 0.  
+
+When `game.play()` is executed, the players play rock paper scissors, at the end, add 1 to the winner points.  
+
+When `game.finish()` is executed, print the name of the winner and the score.  
+
+### Exercise 8 (medium) 
+Create a `TicTacToe` game, the game initialization receives two `Player` objects.  
+```
+rick = Player("Rick")
+morty = Player("Morty")
+game = TicTacToe(rick, morty)
+```
+The game should be run when `game.run()` is executed.  
+
+To create a tictactoe game, you also need to create a `TicTacToeBoard` class, this board simulates a 3x3 grid. Use nested lists to do this:
+```
+grid = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
+```
+This board class doesn't need any initialization parameters.  
+Implement 3 functions: 
+-  `add_symbol`, a function that **receives a symbol, an X coordinate and a Y coordinate** and draw this symbol at the X,Y place in the grid
+-  `display`, a function that prints the rendered grid.
+-  `is_finished`, a function that checks if the game is finished (if on player won or if the board is full)
+
+
+
+### Exercise 9 (hard)
+Create a **Cell Game**.  
+A cell game is a game that simulate evolution, it's a 0 player game, it means that the game starts with an initial state, and run alone.  
+The initial state is a grid (of any size) with some cells that can be dead or alive. For example:
+```
+_ _ _ _ *
+_ * * _ *
+_ * _ _ _
+* * _ * _
+* _ * * _
+
+```
+This is a 5x5 grid, every `_` is a dead cell, and every `*` is an alive one. When the game starts, it simulates generation, at each generation, the grid changes following these rules:
+-  Any live cell with fewer than two live neighbors dies, as if caused by under population.
+-  Any live cell with two or three live neighbors lives on to the next generation.
+-  Any live cell with more than three live neighbors dies, as if by overpopulation.
+-  Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+
+Create a program that simulate one generation, and then another that simulate n (a number given by the user) generations and print the output grid.
+
