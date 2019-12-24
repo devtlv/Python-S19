@@ -34,3 +34,10 @@ A package is made up of multiple python files, and can even include librairies i
 ### \_\_init__.py
 A lot of time when looking at the structure of the packages, you'll see a file called `__init__.py`, this is the old syntax to create python packages, it's not necessary today but most of the packages are built like this. This file is executed when the package is loaded.  
 Every module in the package can be loaded alone by using `from my_package import my_module`
+
+### Some modules examples
+
+- time
+- random
+- requests
+- os

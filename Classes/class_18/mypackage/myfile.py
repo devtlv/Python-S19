@@ -1,0 +1,3 @@
+
+def bark():
+    print("WOOF")
