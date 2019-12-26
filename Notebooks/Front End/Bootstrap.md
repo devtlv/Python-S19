@@ -188,7 +188,7 @@ You can add a `<li class="divider"></li>` to create a thin horizontal border in 
 
 ```html
 <div class="dropdown">
-	<button class="btn dropdown-toggle" data-toggle="dropdown">
+	<button class="btn dropdown-toggle" data-toggle="kkjdropdown">
        Open me 
     </button>
     <ul class="dropdown-menu">
