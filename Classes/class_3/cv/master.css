@@ -1,0 +1,129 @@
+body{
+    background-color: lightsteelblue;
+    font-family: Lato, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: gray;
+}
+
+.inline-content{
+    display: inline-block;
+}
+
+.mylist{
+    list-style: none;
+    list-style-type: non;
+}
+#welcome-text{
+    position: relative;
+    bottom: 100px;
+}
+.main-container{
+    background-color: ghostwhite;
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+    height: 3000px;
+    margin-top: 30px;
+}
+
+#hobbies-list{
+    list-style-type: none;
+}
+
+/*.chocolate p:nth-of-type(2) {*/
+/*    color: blue;*/
+/*}*/
+
+.chocolate p:not(.dont-touch-me){
+    color:blue;
+}
+
+#chat-button{
+    font-weight: bold;
+    font-size: 20px;
+    position: fixed;
+    bottom: 100px;
+    left: 90%;
+    background-color: black;
+    color: ghostwhite;
+    border: none;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+#chat-button:hover{
+    background-color: ghostwhite;
+    color: black;
+    cursor: pointer;
+}
+
+#koalas-box{
+    background-color: purple;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#koalas-box img{
+    width: 100px;
+    height:50px;
+}
+
+.comments-container{
+    width: 80%;
+    margin: auto;
+}
+
+.comments-list{
+    list-style: none;
+    padding: 0;
+}
+
+.comment{
+    border: solid 1px gray;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px;
+}
+
+.comment-title{
+    font-weight: bold;
+}
+
+/*
+.add-comment-form input, .add-comment-form textarea{
+    margin: 5px 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.add-comment-form input[type="text"], .add-comment-form textarea{
+    width: 100%;
+    border: solid 1px #bbbbbb ;
+    border-radius: 5px;
+}
+
+.add-comment-form textarea{
+    resize: none;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+}
+*/
+
+/* Starting form css from 0 with BOOTSTRAP*/
+
+.add-comment-form input, .add-comment-form textarea{
+    border-radius: 5px;
+}
+
+
+
+
+
+

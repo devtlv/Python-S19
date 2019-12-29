@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My first page</title>
+    <link rel="stylesheet" href="master.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main-container">
+        <h1 id="welcome-text" class="inline-content">I'm the Koala !</h1>
+        <img class="inline-content" alt="Koala" height=200 width=200 src="https://www.savethekoala.com/sites/savethekoala.com/files/uploads/koala_donate.jpg"/>
+        <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Here are my hobbies:</p>
+                    <ol class="mylist" id="hobbies-list">
+                        <li><p>Bamboos</p></li>
+                        <li><p>Sleeping</p></li>
+                        <li><p>Climbing on trees</p></li>
+                    </ol>
+                </div>
+                <div class="col-md-6">
+                    <p>Things I don't like to do:</p>
+                    <ol class="mylist" id="things-i-dont-like-to-do">
+                       <li><p>Sport</p></li>
+                        <li><p>Fighting</p></li>
+                        <li><p>Running away because of deforestation</p></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <p>My favorite site is:<a href="https://www.nationalgeographic.com/animals/mammals/k/koala/">The Natures's koalas page</a></p>
+
+        <h2>Comments:</h2>
+        <div class="comments-container">
+            <ul class="comments-list">
+                <li class="comment">
+                    <p class="comment-title">I love your CV !</p>
+                    <p class="comment-content">I really love koalas, thanks for posting your life here !</p>
+                </li>
+                <li class="comment">
+                    <p  class="comment-title">I hate your CV !</p>
+                    <p  class="comment-content">I really hate koalas !</p>
+                </li>
+            </ul>
+
+            <form class="container">
+                <div class="row mb-2">
+                    <label class="col-md-4">Title: </label>
+                    <input class="col-md-8" placeholder="Add a title..." type="text">
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-4">Content: </label>
+                    <textarea class="col-md-8"  placeholder="Add your comment..." cols="50" rows="3"></textarea>
+                </div>
+
+                <div class="row">
+                    <input class="col-md-4 offset-md-8" type="submit" value="Add a comment">
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
