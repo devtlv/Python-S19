@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,26 +9,28 @@
 </head>
 <body>
     <div class="main-container">
-        <h1 id="welcome-text" class="inline-content">I'm the Koala !</h1>
-        <img class="inline-content" alt="Koala" height=200 width=200 src="https://www.savethekoala.com/sites/savethekoala.com/files/uploads/koala_donate.jpg"/>
+        <img class="inline-content" alt="Koala" height=200 width=200 src="{{ animal_pic }}"/>
+        <br>
+        <h1 id="welcome-text" class="inline-content">I'm the {{ animal_name }} !</h1>
+        <p>{{ description }}</p>
         <hr>
 
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p>Here are my hobbies:</p>
+                    <p>Here are {{ animal_name }}'s hobbies:</p>
                     <ol class="mylist" id="hobbies-list">
-                        <li><p>Bamboos</p></li>
-                        <li><p>Sleeping</p></li>
-                        <li><p>Climbing on trees</p></li>
+                        {% for hobby in hobbies %}
+                            <li><p>{{ hobby }}</p></li>
+                        {% endfor %}
                     </ol>
                 </div>
                 <div class="col-md-6">
-                    <p>Things I don't like to do:</p>
+                    <p>Things {{ animal_name }} don't like to do:</p>
                     <ol class="mylist" id="things-i-dont-like-to-do">
-                       <li><p>Sport</p></li>
-                        <li><p>Fighting</p></li>
-                        <li><p>Running away because of deforestation</p></li>
+                        {% for dislike in dislikes %}
+                            <li><p>{{ dislike }}</p></li>
+                        {% endfor %}
                     </ol>
                 </div>
             </div>
@@ -40,14 +41,12 @@
         <h2>Comments:</h2>
         <div class="comments-container">
             <ul class="comments-list">
-                <li class="comment">
-                    <p class="comment-title">I love your CV !</p>
-                    <p class="comment-content">I really love koalas, thanks for posting your life here !</p>
-                </li>
-                <li class="comment">
-                    <p  class="comment-title">I hate your CV !</p>
-                    <p  class="comment-content">I really hate koalas !</p>
-                </li>
+                {% for comment in comments %}
+                    <li class="comment">
+                        <p class="comment-title">{{ comment.title }}</p>
+                        <p class="comment-content">{{ comment.content }}</p>
+                    </li>
+                {% endfor %}
             </ul>
 
             <form class="container">

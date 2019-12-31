@@ -1,10 +1,10 @@
 # Templates?
 
-Templates are a way to generate dynamic html code. Meaning adding variables, for loops and if statements to the HTML code.<br>
+Templates are a way to generate dynamic html code. Meaning adding variables, for loops and if statements to the HTML code.
 The template is written in a template language which combines python and HTML. <br>
 There a lot of python modules that can convert template to html code (called template engines), flask use __jinja2__
 
-> Templates are stored in .html files
+> Templates can be stored with every extension
 
 # Delimiters
 

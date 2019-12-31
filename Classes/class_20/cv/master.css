@@ -16,10 +16,7 @@ a{
     list-style: none;
     list-style-type: non;
 }
-#welcome-text{
-    position: relative;
-    bottom: 100px;
-}
+
 .main-container{
     background-color: ghostwhite;
     width: 80%;
