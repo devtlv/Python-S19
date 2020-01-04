@@ -1,0 +1,7 @@
+<html>
+
+    <body>
+        <h3>Today is the {{ today_date }}</h3>
+    </body>
+
+</html>

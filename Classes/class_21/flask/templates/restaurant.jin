@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My first page</title>
+    <link rel="stylesheet" href="/home/eyal/documents/work/dev-institute/classes/python3/Classes/class_21/flask/master.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main-container">
+        <img class="inline-content" alt="Koala" height=200 width=200 src="downloads/chicken/1.Instant-Pot-Rotisserie-ChickenIMG_8266.jpg"/>
+        <br>
+        <h1 id="welcome-text" class="inline-content">Welcome to {{ restaurant_name }}</h1>
+        <p>{{ food_type }} food</p>
+        <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4-md">
+                    {% for key, content in menu.items() %}
+                        <p>{{ key }}</p>
+                        <ol>
+                            {% for element in content %}
+                                <li><p>{{ element }}</p></li>
+                            {% endfor %}
+                        </ol>
+                    {% endfor %}
+                </div>
+            </div>
+
+
+            </div>
+        <h2>Comments:</h2>
+        <div class="comments-container">
+            <ul class="comments-list">
+                
+                    <li class="comment">
+                        <p class="comment-title">I Love Monkeys</p>
+                        <p class="comment-content">Monkeys are so good at python</p>
+                    </li>
+                
+                    <li class="comment">
+                        <p class="comment-title">I Hate Monkeys</p>
+                        <p class="comment-content">Monkeys are so bad at javascript</p>
+                    </li>
+                
+                    <li class="comment">
+                        <p class="comment-title">I Love Empanadas</p>
+                        <p class="comment-content">It's so tasty</p>
+                    </li>
+                
+                    <li class="comment">
+                        <p class="comment-title">I Love Chocolate</p>
+                        <p class="comment-content">But not too much.</p>
+                    </li>
+                
+                    <li class="comment">
+                        <p class="comment-title">I Lied</p>
+                        <p class="comment-content">Hi it's the chocolate guy, i lied in my previous comment...</p>
+                    </li>
+                
+            </ul>
+
+            <form class="container">
+                <div class="row mb-2">
+                    <label class="col-md-4">Title: </label>
+                    <input class="col-md-8" placeholder="Add a title..." type="text">
+                </div>
+
+                <div class="row mb-2">
+                    <label class="col-md-4">Content: </label>
+                    <textarea class="col-md-8"  placeholder="Add your comment..." cols="50" rows="3"></textarea>
+                </div>
+
+                <div class="row">
+                    <input class="col-md-4 offset-md-8" type="submit" value="Add a comment">
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
