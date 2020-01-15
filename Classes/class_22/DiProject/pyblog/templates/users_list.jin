@@ -1,0 +1,12 @@
+{% extends "base.jin" %}
+
+{% block main %}
+
+    <ol>
+        {% for user in users %}
+            <li><p>{{ user.name }} </p></li>
+        {% endfor %}
+    </ol>
+
+
+{% endblock %}

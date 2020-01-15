@@ -1,4 +1,5 @@
-from pyblog import app
+from pyblog import app, db
+from pyblog import models
 import flask
 
 @app.route('/')
@@ -7,7 +8,14 @@ def homepage():
 
     return flask.render_template("homepage.jin", daily_quote=daily_quote)
 
-
 @app.route("/about-us")
 def about():
     return flask.render_template('about.jin')
+
+@app.route("/users")
+def users_list():
+    users = models.User.query.all()
+    return flask.render_template('users_list.jin', users=users)
+
+
+

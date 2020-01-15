@@ -132,7 +132,7 @@ Even if the database is an object in flask, it has to be a real file behind the 
 -  `$ flask db migrate`, every time you make changes in the database structure, you need to migrate it, it updates the database structure but it doesn't apply those updates
 -  `$ flask db upgrade`, this time, flask update your changes and change the database structure
 
-*** 
+***
 ## Add new objects to the database
 Once you have your Model class, you can create some objects very simply.
 
@@ -187,3 +187,6 @@ To select one from this list, a lot of selectors are available <a href="">here</
 -  `flask_sqlalchemy` and `flask_migrate` are both required to deal with databases, one for the database and the other for the structure.
 -  `SQLALCHEMY_DATABASE_URI` is required to implement the database in the app
 -  Database is built with `SQLAlchemy` class and migration with `Migrate` class.
+-  Models have to be classes that inherit from `db.Model`.
+-  Models should contain columns that are instances of `db.Column`
+-  To create a new object in the database, first create python object (an instance of the model), and then pass it through `db.session.add` to stage it, and run `db.session.commit()` to add all the staged objects to the real database.
