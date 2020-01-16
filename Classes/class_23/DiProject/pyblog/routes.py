@@ -32,27 +32,26 @@ def signup():
     # If the form has already been filled and the user
     # is sending the data through post
     if flask.request.method == 'POST':
+        if myform.validate_on_submit():
+            # Retrieving the data from the form
+            age  = int(myform.age.data)
+            name = myform.name.data
+            pwd  = myform.pwd.data
 
-        # Retrieving the data from the form
-        age  = int(myform.age.data)
-        name = myform.name.data
-        pwd  = myform.pwd.data
+            # Create a user
+            user = models.User(name=name, age=age, pwd=pwd)
 
-        # Create a user
-        user = models.User(name=name, age=age, pwd=pwd)
+            # Add it to the database
+            db.session.add(user)
+            db.session.commit()
 
-        # Add it to the database
-        db.session.add(user)
-        db.session.commit()
-
-        # Redirect
-        return flask.redirect(flask.url_for('homepage'))
+            # Redirect
+            return flask.redirect(flask.url_for('homepage'))
 
     # It's the first time that the user fetches this page and 
     # we need to send him the page content (the HTML)
-    else:
 
-        return flask.render_template('signup.jin', form=myform)
+    return flask.render_template('signup.jin', form=myform)
 
 
 
