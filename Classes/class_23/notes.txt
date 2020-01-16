@@ -1,0 +1,49 @@
+How to create a form
+
+===== 1 - Creating the Form class =====
+
+1) In the forms.py file, import flask_wtf and wtforms (flask_wtf provide FlaskForm class and wtforms provide fields)
+
+2) Create a class that inherits from flask_wtf.FlaskForm 
+
+3) As class variables, define every field of form, those fields are objects of wtforms.<FieldName>, you just have to provide a label (string) as first keyword argument
+
+4) Don't forget the submit button
+
+
+===== 2 - Creating the template for this form =====
+
+1) Choose the name of your form variable
+
+2) Create a <form> tag, with those attributes:
+- action=""
+- method="POST"
+
+3) Inside this form, add the fields (you can choose the tags that you use there) by using {{ form.<fieldname>.label }} to get the label, and {{ form.<field_name>() }} to render the actual field html
+
+4) Don't forget the submit button
+
+
+===== 3 - Create the route for this form =====
+
+1) In the route decorator, add methods=('GET', 'POST')
+
+2) Create a form object, instance of the class that you created
+
+3) Test if the request is POST or GET, you can use flask.request.method (that is equal to 'GET' or 'POST', case sensitive) to create a condition
+
+4) If it's a GET method, just return your template, and provide your form (make sure that the name of the parameter that contain the form is the same as the variable name for your form in the template)
+
+5) If it's a POST method, do something with the form data, form data can be retrieved by typing <form_name>.<field_name>.data. For example, create a model fed by this form data, and then use db.session.add(obj) and db.session.commit() to add it to the database.
+
+
+
+
+
+
+
+
+
+
+
+
