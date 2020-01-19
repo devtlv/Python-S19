@@ -1,0 +1,6 @@
+{% extends "base.jin" %}
+
+{% block main %}
+    <p>Hello, world, welcome to my blog</p>
+    <p>Daily quote: {{ daily_quote }}</p>
+{% endblock %}

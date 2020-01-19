@@ -1,0 +1,5 @@
+{% extends "base.jin" %}
+
+{% block main %}
+    <small>This site has been developped by Eyal Sanchez</small>
+{% endblock %}

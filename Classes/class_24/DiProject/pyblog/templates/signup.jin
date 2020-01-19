@@ -1,0 +1,35 @@
+{% extends "base.jin" %}
+
+{% block main %}
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.name.label }}
+            {{ form.name() }}
+            {% for error in form.name.errors %}
+                <span style="color:red">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.age.label }}
+            {{ form.age() }}
+        </p>
+        <p>
+            {{ form.pwd.label }}
+            {{ form.pwd() }}
+        </p>
+        <p>
+
+            {{ form.pwd_confirm.label }}
+            {{ form.pwd_confirm() }}
+            {% for error in form.pwd_confirm.errors %}
+                <span style="color:red">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.submit() }}
+        </p>
+
+    </form>
+{% endblock %}

@@ -1,0 +1,27 @@
+
+{% extends "base.jin" %}
+
+{% block main %}
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.name.label }}
+            {{ form.name() }}
+            {% for error in form.name.errors %}
+                <span style="color:red">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.pwd.label }}
+            {{ form.pwd() }}
+            {% for error in form.pwd.errors %}
+                <span style="color:red">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.submit() }}
+        </p>
+
+    </form>
+{% endblock %}
