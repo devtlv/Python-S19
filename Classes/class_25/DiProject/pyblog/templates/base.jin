@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>My Awesome Blog</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/master.css') }}">
+</head>
+
+<body>
+    
+    <nav class="navbar">
+        <div class="content">
+            <div class="left">
+                <a class="nav_link" class="nav_link" href="{{ url_for('homepage') }}">Home</a>
+                <a class="nav_link" href="{{ url_for('about') }}">About us</a>
+                <a class="nav_link" href="{{ url_for('users_list') }}">Users</a>
+            </div>
+            <div class="right">
+                {% if current_user.is_anonymous %}
+                    <a class="nav_link" href="{{ url_for('signup') }}">Sign up</a>
+                    <a class="nav_link" href="{{ url_for('signin') }}">Sign in</a>
+                {% else %}
+                    <p><a href="{{ url_for('userpage', user_id=current_user.get_id() ) }}">{{ current_user.name }}</a>(<a href="{{ url_for('signout') }}">Log out</a>) </p>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    
+    <div class="main-container">
+        {% for msg in get_flashed_messages() %}
+            <p>{{ msg }}</p> 
+        {% endfor %}
+        {% block main %}   
+        {% endblock %}
+    </div>
+</body>
+
+</html>
