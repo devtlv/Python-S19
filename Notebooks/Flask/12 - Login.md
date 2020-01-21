@@ -58,9 +58,16 @@ from app import login_mngr, models
 def load_user(userid):
     userid = int(userid)
     return models.User.query.get(userid)
+
+
+class User(flask_login.UserMixin, db.Model):
+    #...
+    def get_id(self):
+        # Returns the field that we (our database) consider as id (primary key)
+        return self.user_id
 ```
 
-*** 
+***
 ## Retrieve the current user
 `flask_login.current_user` allows us to retrieve the current user logged in.
 
@@ -161,7 +168,7 @@ def secret():
 
 {% block content %}
     <h1>Hi, {{ current_user.username }}!</h1>
-    {% for post in posts %}
+​    {% for post in posts %}
     <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
-    {% endfor %}
+​    {% endfor %}
 {% endblock %}

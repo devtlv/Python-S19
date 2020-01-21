@@ -23,8 +23,9 @@ class SignupForm(flask_wtf.FlaskForm):
 
     name = wtforms.StringField("Name")
     age  = wtforms.IntegerField("Age")
+    email = wtforms.StringField("Email", validators=[vld.Email()])
     pwd  = wtforms.PasswordField("Password")
-    pwd_confirm = wtforms.PasswordField("Confirm password", 
+    pwd_confirm = wtforms.PasswordField("Confirm password",
                                         validators=[EqualToCI('pwd', message="PLEASE PUT THE SAME PASSWORD IN THE TWO FIELDS")])
     submit = wtforms.SubmitField("Signup")
 
@@ -33,6 +34,15 @@ class SigninForm(flask_wtf.FlaskForm):
     pwd          = wtforms.PasswordField("Password")
     remember_me  = wtforms.BooleanField("Remember me")
     submit       = wtforms.SubmitField("Sign in")
+
+class UpdateProfileForm(flask_wtf.FlaskForm):
+    status = wtforms.StringField("Status")
+    name = wtforms.StringField("Name")
+    age  = wtforms.IntegerField("Age")
+    email = wtforms.StringField("Email", validators=[vld.Email()])
+
+    submit       = wtforms.SubmitField("Update profile")
+
 
 
 

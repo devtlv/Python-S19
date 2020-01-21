@@ -2,7 +2,17 @@
 
 {% block main %}
 
-    <h1>{{ user.name }}<h1>
-    <p>{{ user.name }} is {{ user.age }} years old and his password is {{ user.pwd }}</p>
-
+    <h2>{{ user.name }}</h2>
+    <small>{{ user.status }}</small>
+    <hr>
+    <div class="posts-container">
+        {% for post in user.posts %}
+            <div class="post-container"> 
+                <p class="post-title">{{ post.title }}</p>
+                <p class="post-content">{{ post.content }}</p>
+                <small class="post-date">{{ post.get_human_date() }}</small>
+            </div>
+        {% endfor %}
+    </div>
+    
 {% endblock %}

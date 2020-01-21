@@ -52,21 +52,6 @@ class User(UserMixin, db.Model):
 ```
 
 
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-1-47bb271c3d38> in <module>
-          1 from datetime import datetime
-    ----> 2 class User(UserMixin, db.Model):
-          3     # ...
-          4     last_seen = db.Column(db.DateTime(), default=datetime.utcnow)
-          5     # ...
-    
-
-    NameError: name 'UserMixin' is not defined
-
-
 But we need to update it, we can do it in the login view function, in routes.py.
 
 
@@ -81,6 +66,7 @@ def login_view():
 
 Then, updating the template should be easy
 #...
+
 <h1>{{ user.username }}</h1>
 <p>Last seen on: {{ user.last_seen }}</p>
 #...

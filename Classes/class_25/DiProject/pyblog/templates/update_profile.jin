@@ -1,0 +1,39 @@
+{% extends "base.jin" %}
+
+{% block main %}
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.status.label }}
+            {{ form.status() }}
+            {% for error in form.status.errors %}
+                <span style="color:red">{{ error }}</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.name.label }}
+            {{ form.name() }}
+            {% for error in form.name.errors %}
+                <span style="color:red">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.email.label }}
+            {{ form.email() }}
+            {% for error in form.email.errors %}
+                <span style="color:red">{{ error }}</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.age.label }}
+            {{ form.age() }}
+        </p>
+       <p>
+            {{ form.submit() }}
+        </p>
+
+    </form>
+{% endblock %}

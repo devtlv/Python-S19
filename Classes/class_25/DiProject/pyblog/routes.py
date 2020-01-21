@@ -67,10 +67,11 @@ def signup():
             # Retrieving the data from the form
             age  = int(myform.age.data)
             name = myform.name.data
+            email = myform.email.data
             pwd  = myform.pwd.data
 
             # Create a user
-            user = models.User(name=name, age=age, pwd=pwd)
+            user = models.User(name=name, email=email, age=age, pwd=pwd)
 
             # Add it to the database
             db.session.add(user)
@@ -84,10 +85,43 @@ def signup():
 
     return flask.render_template('signup.jin', form=myform)
 
+@app.route('/profile-update', methods=('GET', 'POST'))
+def update_profile():
+    form = forms.UpdateProfileForm()
+    user = flask_login.current_user
+    if user.is_anonymous:
+        flask.flash("You need to be logged in to make this action")
+        return flask.redirect(flask.url_for('homepage'))
+
+    if flask.request.method == 'POST':
+        if form.validate_on_submit():
+            status = form.status.data
+            name = form.name.data
+            age = form.age.data
+            email = form.email.data
+            user.update_profile(status, name, email, age)
+
+            return flask.redirect(flask.url_for('userpage', user_id=user.user_id))
+
+    # Pre fill form
+    form.status.data = user.status
+    form.name.data = user.name
+    form.age.data = user.age
+    form.email.data = user.email
+
+    return flask.render_template('update_profile.jin', form=form)
+
+
 @app.route('/sign-out')
 def signout():
     flask_login.logout_user()
     return flask.redirect(flask.url_for('homepage'))
 
+@app.route('/delete-user/')
+def delete_user():
+    user = flask_login.current_user 
+    flask_login.logout_user(user)
+    db.session.delete(user)
+    return flask.redirect(flask.url_for('homepage'))
 
 
