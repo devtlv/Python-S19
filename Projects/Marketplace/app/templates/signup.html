@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block main %}
+    <div>
+        <header>New Customer Signup</header>
+        <hr>
+    </div>
+    <form method="post" action="" novalidate>
+    {{ form.hidden_tag()}}
+
+    {{ form.customer_name.label }}
+    {{ form.customer_name(size=16)}}<br>
+        {% for error in form.customer_name.errors %}
+            <span style="color:red";>[{{ error }}]</span>
+        {% endfor %}
+
+    {{ form.customer_password.label }}
+    {{ form.customer_password(size=16)}}<br>
+        {% for error in form.customer_password.errors %}
+            <span style="color: red";>[{{ error }}]</span>
+        {% endfor%}
+
+    {{ form.submit() }}
+    </form>
+
+{% endblock %}
+

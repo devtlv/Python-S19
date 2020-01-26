@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <ol class="list-group">
+        {% for item in current_user.basket %}
+            <li class="list-group-item"> 
+                <p>{{ item.item_name }} - ${{ item.price }}</p>
+                <a href="{{ url_for('remove_from_cart', item_id=item.item_id) }}">Remove</a>
+            </li>
+        {% endfor %}
+    </ol>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+    <div class="basket-container">
+        {% for item in customer.basket %}
+            <div class="post-container">
+                <p class="item.name">item name: {{ item.name}}</p>
+                <p class="item.price">item price: {{ item.price}}</p>
+                <br>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="basket-total">
+        <h2>{{ basket_total}} </h2>
+    </div>
+
+{% endblock %}

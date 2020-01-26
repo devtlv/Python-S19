@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block main %}
+    <ol class="list-group">
+        {% for product in products %}
+            <div class="list-group-item">
+                <p>{{ product.item_name }} - ${{ product.price }}
+                {% if product.instock %}
+                <span style="color:red">In stock !</span>
+                {% endif %}
+                </p>
+                <a href="{{ url_for('add_to_cart', item_id=product.item_id) }}">Add to cart</a>
+                {% with url='api_add_to_cart' %}
+                <button onclick="addToCart('{{ url_for(url, item_id=product.item_id) }}')" type="button" class="btn">Add to cart</button>
+                {% endwith %}
+            </div>
+        {% endfor %}
+    </ol>
+{% endblock%}
+
+
