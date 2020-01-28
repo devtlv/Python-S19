@@ -1,5 +1,15 @@
 {% extends "base.jin" %}
 
 {% block main %}
+    <div class="list-group">
+        {% for topic in topics %}
 
+            <div class="list-group-item list-group-item-action">
+                <a href="{{ url_for('topic_page', topic_id=topic.id) }}"><b>{{ topic.author.username }} - {{ topic.subject }}</b></a>
+                <p>{{ topic.content|truncate(50) }}</p>
+                <small>{{ topic.time }}</small>
+            </div>
+
+        {% endfor %}
+    </div>
 {% endblock %}

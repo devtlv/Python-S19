@@ -1,4 +1,5 @@
-from python_landing import app
+from python_landing import app, models
+import requests
 import flask
 
 @app.route('/')
@@ -7,18 +8,26 @@ def homepage():
 
 @app.route('/news')
 def news():
-    news = [
-        "Python 3.8 just came out !",
-        "You can now use := operator",
-        "This site is made with flask"
-    ]
+    api_key = "e9ea763d28384a2ea98fea09dbaf8720"
+    url = "https://newsapi.org/v2/everything?q=python&apiKey={}".format(api_key)
+    r = requests.get(url)
+    content = r.json()
 
-    return flask.render_template('news.jin', news=news)
+    return flask.render_template('news.jin', news=content['articles'])
 
 @app.route('/forum')
 def forum():
+    topics = models.Topic.query.all()
 
-    return flask.render_template('forum.jin')
+    return flask.render_template('forum.jin', topics=topics)
+
+@app.route('/forum/<int:topic_id>')
+def topic_page(topic_id):
+    topic = models.Topic.query.get(topic_id)
+
+    return flask.render_template('topic_page.jin', topic=topic)
+
+
 
 
 

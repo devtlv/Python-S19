@@ -1,0 +1,17 @@
+{% extends "base.jin" %}
+
+{% block main %}
+    <h3>{{ topic.subject }}</h3>
+    <p>{{ topic.body }}</p>
+    
+    <div class="list-group">
+        {% for msg in topic.messages %}
+
+            <div class="list-group-item list-group-item-action">
+                <b>{{ msg.author.username }}<b>
+                <p>{{ msg.body }}</p>
+                <small>{{ msg.time }}</small>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
