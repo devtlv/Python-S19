@@ -39,7 +39,7 @@ echo 'from platform_app import routes, models' >> __init__.py
 # Feed routes.py
 echo 'import flask' >> routes.py
 echo '' >> routes.py
-echo 'from $folder_name import app' >> routes.py
+echo "from $folder_name import app" >> routes.py
 echo '' >> routes.py
 echo '@app.route("/")' >> routes.py
 echo 'def homepage():' >> routes.py
@@ -51,16 +51,23 @@ echo '' >> routes.py
 echo '<!DOCTYPE html>' >> templates/base.jin
 echo '<html lang="en">' >> templates/base.jin
 echo '<head>' >> templates/base.jin
-  echo '<title>Bootstrap Example</title>' >> templates/base.jin
-  echo '<meta charset="utf-8">' >> templates/base.jin
-  echo '<meta name="viewport" content="width=device-width, initial-scale=1">' >> templates/base.jin
-  echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">' >> templates/base.jin
-  echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>' >> templates/base.jin
-  echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>' >> templates/base.jin
-  echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>' >> templates/base.jin
+echo '<title>Bootstrap Example</title>' >> templates/base.jin
+echo '<meta charset="utf-8">' >> templates/base.jin
+echo '<meta name="viewport" content="width=device-width, initial-scale=1">' >> templates/base.jin
+echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">' >> templates/base.jin
+echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>' >> templates/base.jin
+echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>' >> templates/base.jin
+echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>' >> templates/base.jin
 echo '</head>' >> templates/base.jin
 echo '<body>' >> templates/base.jin
 echo '' >> templates/base.jin
+echo '{% block main %}' >> templates/base.jin
+echo '{% endblock %}' >> templates/base.jin
+echo '' >> templates/base.jin
+echo '<footer>' >> templates/base.jin
+echo '{% block footer %}' >> templates/base.jin
+echo '{% endblock %}' >> templates/base.jin
+echo '</footer>' >> templates/base.jin
 echo '</body>' >> templates/base.jin
 echo '</html>' >> templates/base.jin
 
