@@ -1,0 +1,8 @@
+--- Models
+
+class User:
+    + id
+    + name
+    + role
+    + mail
+    + pwd
