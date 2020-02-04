@@ -1,0 +1,16 @@
+{% extends "base.jin" %}
+
+{% block main %}
+    <form method="post" action="" novalidate>
+    {{ form.hidden_tag() }}
+
+    {{ form.email.label }}
+    {{ form.email(size=10) }} <br>
+        {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+
+    {{ form.submit() }}
+    </form>
+    
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.jin" %}
+
+{% block main %}
+    <form method="POST" action="" novalidate>
+        {{ form.hidden_tag() }}
+    
+        <p>
+            {{ form.new_pwd.label }}
+            {{ form.new_pwd() }}
+        </p>
+
+        <p>
+            {{ form.submit() }}
+        </p>
+    </form>
+{% endblock %}

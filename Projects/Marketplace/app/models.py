@@ -1,5 +1,6 @@
 from app import db, login_mgr
 import flask_login
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 @login_mgr.user_loader
@@ -24,6 +25,13 @@ class Customer(flask_login.UserMixin, db.Model):
                                         secondary=basket_table,
                                         back_populates="buyers"
                                        )
+
+    def change_pwd(self, pwd):
+        pwd_hash = generate_password_hash(pwd)
+        self.customer_password = pwd_hash
+
+    def check_pwd(self, pwd):
+        return check_password_hash(self.customer_password, pwd)
 
     def get_id(self):
         return self.customer_id

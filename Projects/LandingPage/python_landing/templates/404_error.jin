@@ -1,0 +1,8 @@
+{% extends "base.jin" %}
+
+{% block main %}
+
+    <p class="display-1">:/</p>    
+    <p class="display-2">Page Not Found - This page doesn't exist</p>    
+
+{% endblock %}

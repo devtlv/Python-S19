@@ -12,7 +12,10 @@ def signup():
 
     if form.validate_on_submit():
 
-        customer = Customer(customer_name=form.customer_name.data,customer_password=form.customer_password.data,status="active")
+        customer = Customer(customer_name=form.customer_name.data,
+                            status="active")
+
+        customer.change_pwd(form.customer_password.data)
 
         db.session.add(customer)
         db.session.commit()
@@ -34,7 +37,7 @@ def login():
     if form.validate_on_submit():
         customer = models.Customer.query.filter_by(customer_name=form.customer_name.data).first()
 
-        if customer is None or not customer.customer_password == form.customer_password.data:
+        if customer is None or not customer.check_pwd(form.customer_password.data):
             flask.flash('Invalid customer Name or password')
             return flask.redirect(url_for('login'))
 
@@ -86,6 +89,13 @@ def remove_from_cart(item_id):
 @app.route('/cart')
 def user_cart():
     return flask.render_template('user_cart.jin')
+
+# Errors
+@app.errorhandler(404)
+def error_404(err):
+    print(err)
+    return flask.render_template("404_error.jin")
+
 
 # API funcs
 @app.route('/api/add-to-cart/<int:item_id>')
