@@ -1,0 +1,23 @@
+{% extends "base.jin" %}
+
+{% block main %}
+<form action="" method="POST">
+  <div class="form-group">
+      {{ form.mail.label }}
+      {{ form.mail() }}
+  </div>
+  <div class="form-group">
+      {{ form.name.label }}
+      {{ form.name() }}
+  </div>
+  <div class="form-group">
+      {{ form.role.label }}
+      {{ form.role() }}
+  </div>
+  <div class="form-group">
+      {{ form.password.label }}
+      {{ form.password() }}
+  </div>
+  {{ form.submit(class="btn btn-primary") }}
+</form>
+{% endblock %}

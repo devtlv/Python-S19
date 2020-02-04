@@ -6,5 +6,6 @@ app = flask.Flask(__name__)
 
 db = flask_sqlalchemy.SQLAlchemy(app)
 migrate = flask_migrate.Migrate(app, db)
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///" + os.path.join(basedir, 'app.db')
 
 from platform_app import routes, models
