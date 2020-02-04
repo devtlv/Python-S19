@@ -2,13 +2,15 @@
 
 {% block main %}
 <form action="" method="POST">
+    {{ form.hidden_tag() }}
+
   <div class="form-group">
       {{ form.mail.label }}
       {{ form.mail() }}
   </div>
   <div class="form-group">
-      {{ form.password.label }}
-      {{ form.password() }}
+      {{ form.pwd.label }}
+      {{ form.pwd() }}
   </div>
   {{ form.submit(class="btn btn-primary") }}
 </form>
