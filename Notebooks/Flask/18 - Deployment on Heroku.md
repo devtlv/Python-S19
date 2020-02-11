@@ -25,11 +25,12 @@ Here is the format of each line in the file:
 <process_name>: <command>
 ```  
 
-To start a web application, the `process_name` should be `web`. If you need to add more than one command, just separate them with a semi-colon `;`.
+To start a web application, the `process_name` should be `web`. If you need to add more than one command, just separate them with a semi-colon `;`.  
 
 Here is an example of a procfile:
 
-web: flask db upgrade
+` web: flask db upgrade`
+
 ### Create an app
 After you logged in, you can create an app by running:  
 ```bash 
@@ -41,13 +42,14 @@ heroku apps:create <name_of_the_app>
 SQLite is good for developement, but shouldn't be used for deployed site. Instead of this, use other SQL databases like MySQL or PostgreSQL.  
 To install Postgres support on heroku, run this in your terminal:  
 ```bash
-heroku addons:create heroku-postgresql:hobby-dev
+heroku addons:create heroku-postgresql:hobby-dev --app <app_name>
 ```  
-The path to the database will be stored in the `DATABASE_URL` environnement variable, thus we can delete the `SQL_DATABASE_URI` from the config.  
+The path to the database will be automatically stored in the `DATABASE_URL` environnement variable, thus you should use `os.environ` to retrieve it in your config.
 To work with postgres, you need a little module, called psycopg2, to install it, run `pip install psycopg2` (if the installation doesn't work, that's ok, anyway it was not supposed to run on your local computer, heroku will install it)
 > Don't forget to put psycopg2 in your requirements file
 
-
+### Run migration
+You can run a command on the server with the `heroku run` command, to migrate your database, use `heroku run flask db upgrade --app <app_name>`.
 
 ### Logs
 
@@ -90,11 +92,13 @@ git push heroku master
 ```  
 
 Here you are, your server is running, run `heroku logs` to see the output of your app.
-   _____                 _     _       _       _ 
-  / ____|               | |   (_)     | |     | |
+```
+   _____                 _     _       _       _   
+  / ____|               | |   (_)     | |     | |  
  | |  __  ___   ___   __| |    _  ___ | |__   | |
  | | |_ |/ _ \ / _ \ / _` |   | |/ _ \| '_ \  | |
  | |__| | (_) | (_) | (_| |   | | (_) | |_) | |_|
   \_____|\___/ \___/ \__,_|   | |\___/|_.__/  (_)
                              _/ |                
                             |__/                 
+``` 

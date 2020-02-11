@@ -46,7 +46,7 @@ def send_mail():
     return "Done."
 
 # Logins
-@app.route('/change-password/<str:token>', methods=('GET', 'POST'))
+@app.route('/change-password/<token>', methods=('GET', 'POST'))
 def change_pwd(token):
     form = forms.PwdModifForm()
     if flask.request.method == 'POST':

@@ -19,6 +19,11 @@ body {
 	padding: 1.5em 0;
 }
 
+main-container{
+    width:70%;
+    margin:auto;
+}
+
 form {
 	display: block;
 	margin: auto;

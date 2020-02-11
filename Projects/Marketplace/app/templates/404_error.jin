@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <h1>Sorry, this page doesn't exist</h1>
+{% endblock %}
