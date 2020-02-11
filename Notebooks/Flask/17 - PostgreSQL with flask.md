@@ -9,7 +9,7 @@ More on https://www.postgresql.org/about
 
 ### Installation
 For MAC OSX: https://postgresapp.com/  
-For Windows: https://www.postgresql.org/download/
+For Windows: https://www.postgresql.org/download/  
 For linux: See your distribution documentation, you may need to start it with `systemctl`
 
 > Follow the documentation !
@@ -27,7 +27,8 @@ You can put this directly in your code:
 ```
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://url/to/database"
 ```
-You can also define it as an environnement variable (for more flexibility), to do so, type this in the terminal:  
+You can also define it as an environnement variable (for more flexibility), to do so, type this in the terminal:   
+
 `> export DATABASE_URL="postgresql://url/to/database"`  
 And use `os` module to retrieve it in your code:  
 ```
