@@ -9,7 +9,7 @@ app = flask.Flask(__name__)
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/di_python_2019'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config['SECRET_KEY'] = 'ILOVECHOCOLATE'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 

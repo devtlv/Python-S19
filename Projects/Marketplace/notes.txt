@@ -1,0 +1,3 @@
+virtualenvwrapper:
+
+    - mkvirtualenv <env_name>: Create a new virtual environnement

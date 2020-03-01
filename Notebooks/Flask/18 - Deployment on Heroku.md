@@ -1,11 +1,12 @@
 # Heroku
-Heroku is a Platform as a Service (A cloud platform) hosting that supports python. 
+Heroku is a PaaS - Platform as a Service (a cloud platform) hosting that supports python. 
 
 ### Requirements to deploy your app on heroku
 
-To deploy on heroku, you first need to have a requirements.txt file, this is a file that define every module needed by your program. To automatically create one, you can install pipreqs (`pip install pipreqs`) and run `pipreqs .` in your project folder.  
-Your project needs also to be a git repository, you can do this by running `git init` in your project folder.  
-Now the last thing you need is a [heroku account](https://signup.heroku.com/)
+To deploy on heroku, you need 3 basic things:  
+1. Create a requirements.txt file, this is a file that define every module needed by your program. To create one automatically, you can install pipreqs (`pip install pipreqs`) and run `pipreqs .` in your project folder.  
+2. Make your project folder a git repository, you can do this by running `git init` in your project folder.  
+3. A [heroku account](https://signup.heroku.com/)
 
 ### Installing the Heroku Command Line
 To manage Heroku apps directly from the terminal, you can use the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli). To verify your installation, type `heroku --version` in your terminal.
@@ -72,8 +73,9 @@ gunicorn <file_name>:<variable_name>
 
 This command should be in the procfile, on my computer, my runner file is called `wsgi.py` and inside it I run `app.run(port=5000)`, so the variable is called `app`, thus I'll put this in my procfile:
 
-web: flask db upgrade; gunicorn wsgi:app
-> Notice That the 
+web: flask db upgrade; gunicorn wsgi:app  
+
+> Notice that the name of the file don't contain the `.py` extension.
 
 ### Deploy !
 
@@ -89,9 +91,11 @@ git commit -m "heroku deployment"
 And then push it to the heroku server, heroku automatically adds the server as a remote repository, with `heroku` as label, so just run:  
 ```bash 
 git push heroku master
-```  
+``` 
 
-Here you are, your server is running, run `heroku logs` to see the output of your app.
+**Your website is now available** at this URL: <a>https://app_name.herokuapp.com</a>
+
+Your server is running, run `heroku logs` to see the output of your app.  
 ```
    _____                 _     _       _       _   
   / ____|               | |   (_)     | |     | |  

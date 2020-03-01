@@ -9,7 +9,7 @@ Virtualenv is a tool which allows us to make isolated python environments. It al
 Installing virtualenv can be done with *pip*<br>
 > `$ pip install virtualenv`
 
-*** 
+***
 ### Using virtualenv
 
 First, we need to create a virtual env, this can be done with:<br>
@@ -21,6 +21,8 @@ And then we just need to activate it by running: <br>
 
 To deactivate it:
 > `$ deactivate`
+
+If you want to add a command at the activation of the virtual env (for example, to define an environement variable), you can edit the virtualenv_name/bin/activate script. But be careful with this...
 
 ***
 See: <a href="https://docs.python-guide.org/dev/virtualenvs/">Virtualenv documentation</a>
